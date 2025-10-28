@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TP Cab WhatsApp Connect</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #25D366, #075E54);
+      color: #fff;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .logo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+    button {
+      background-color: #25D366;
+      color: #fff;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      font-size: 16px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background-color: #1fa558;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.25);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 👇 Add your TP Cab logo here -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" 
+         alt="TP Cab Logo" class="logo">
+
+    <h2>Welcome to TP Cab Technologies Pvt. Ltd.</h2>
+    <p>Click below to send an automatic message to TP Cab Team 🚖</p>
+
+    <!-- Buttons -->
+    <button onclick="sendAutoMsg('9431852350')">
+      Message TP Cab (9431852350)
+    </button>
+
+    <button onclick="sendAutoMsg('7979006036')">
+      Message TP Cab (7979006036)
+    </button>
+  </div>
+
+  <footer>
+    © 2025 TP Cab Technologies Pvt. Ltd. | Banka, Bihar, India  
+    <br />
+    📞 +91 7979006036 | ✉️ tpcabbanka@zohomail.in
+  </footer>
+
+  <script>
+    function sendAutoMsg(phone) {
+      const message = encodeURIComponent(
+        "Hello TP Cab Team, I would like to book your cab service or know more about your travel offers. Please share details."
+      );
+      const url = `https://wa.me/91${phone}?text=${message}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
